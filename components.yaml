@@ -1,4 +1,4 @@
-jedi_obsimul:
+jedi_gaan:
   fixture: true
   develop: develop
 
@@ -67,25 +67,20 @@ ioda:
 #  - gsw
 #  - crtm
 
-#vader:
-#  local: ./src/@vader
-#  remote: https://github.com/JCSDA/vader
-#  branch: develop
+vader:
+  local: ./src/@vader
+  remote: https://github.com/JCSDA/vader
+  branch: develop
 
 saber:
   local: ./src/@saber
   remote: https://github.com/JCSDA-internal/saber
   branch: develop
 
-fv3-jedi:
-  local: ./src/@fv3-jedi
-  remote: https://github.com/JCSDA-internal/fv3-jedi
-  branch: develop
-
-#crtm:
-#  local: ./src/@crtm
-#  remote: https://github.com/JCSDA/crtm
-#  tag: v2.4.1-jedi.1
+crtm:
+  local: ./src/@crtm
+  remote: https://github.com/JCSDA/crtm
+  tag: v2.4.1-jedi.1
 
 ufo:
   local: ./src/@ufo
@@ -96,3 +91,9 @@ ufo-data:
   local: ./data/ufo-data
   remote: https://github.com/JCSDA-internal/ufo-data
   branch: develop
+
+fv3-jedi:
+  local: ./src/@fv3-jedi
+  remote: https://github.com/JCSDA-internal/fv3-jedi
+  branch: develop
+    
