@@ -92,9 +92,9 @@ ufo-data:
   remote: https://github.com/JCSDA-internal/ufo-data
   branch: develop
 
-fv3-jedi:
+fv3-jedi-lm:
   local: ./src/@fv3-jedi-lm
-  remote: https://github.com/JCSDA-internal/fv3-jedi-lm
+  remote: https://github.com/JCSDA-internal/fv3-jedi-linearmodel
   branch: develop
 
 fv3-jedi:
