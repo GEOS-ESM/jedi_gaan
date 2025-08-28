@@ -8,6 +8,8 @@ src/@ioda/
 src/@oops/
 src/@ufo/
 src/@vader/
+src/@saber/
+src/@fv3-jedi/
 /.mepo/
 /build/
 /install/
