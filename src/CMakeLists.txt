@@ -58,19 +58,20 @@ ExternalProject_Add(
     -DCMAKE_INSTALL_PREFIX:PATH=${CMAKE_INSTALL_PREFIX}
     -DENABLE_IODA_DATA:BOOL=ON
 )
+ExternalProject_Add_StepDependencies(vader build oops)
 
 ExternalProject_Add(
-  fv3jedi
-  SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/@fv3jedi
+  fv3-jedi
+  SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/@fv3-jedi
   CMAKE_ARGS
     -DCMAKE_INSTALL_PREFIX:PATH=${CMAKE_INSTALL_PREFIX}
 )
-ExternalProject_Add_StepDependencies(fv3jedi build oops)
-ExternalProject_Add_StepDependencies(fv3jedi build saber)
-ExternalProject_Add_StepDependencies(fv3jedi build vader)
-ExternalProject_Add_StepDependencies(fv3jedi build ioda)
-ExternalProject_Add_StepDependencies(fv3jedi build crtm)
-ExternalProject_Add_StepDependencies(fv3jedi build ufo)
+ExternalProject_Add_StepDependencies(fv3-jedi build oops)
+ExternalProject_Add_StepDependencies(fv3-jedi build saber)
+ExternalProject_Add_StepDependencies(fv3-jedi build vader)
+ExternalProject_Add_StepDependencies(fv3-jedi build ioda)
+ExternalProject_Add_StepDependencies(fv3-jedi build crtm)
+ExternalProject_Add_StepDependencies(fv3-jedi build ufo)
 
 file (GLOB obsimul_files gaan/*.py)
 install (
