@@ -22,6 +22,13 @@ ExternalProject_Add(
 
 
 ExternalProject_Add(
+  ioda-data
+  SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/@ioda-data
+  CMAKE_ARGS
+    -DCMAKE_INSTALL_PREFIX:PATH=${CMAKE_INSTALL_PREFIX}
+    -DENABLE_IODA_DATA:BOOL=ON
+)
+ExternalProject_Add(
   ioda
   SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/@ioda
   CMAKE_ARGS
@@ -29,6 +36,16 @@ ExternalProject_Add(
     -DENABLE_IODA_DATA:BOOL=ON
 )
 ExternalProject_Add_StepDependencies(ioda build oops)
+ExternalProject_Add_StepDependencies(ioda build ioda-data)
+
+
+ExternalProject_Add(
+  ufo-data
+  SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/@ufo-data
+  CMAKE_ARGS
+    -DCMAKE_INSTALL_PREFIX:PATH=${CMAKE_INSTALL_PREFIX}
+    -DENABLE_IODA_DATA:BOOL=ON
+)
 
 
 ExternalProject_Add(
@@ -41,6 +58,8 @@ ExternalProject_Add(
 ExternalProject_Add_StepDependencies(ufo build ioda)
 ExternalProject_Add_StepDependencies(ufo build oops)
 ExternalProject_Add_StepDependencies(ufo build crtm)
+ExternalProject_Add_StepDependencies(ufo build ioda-data)
+ExternalProject_Add_StepDependencies(ufo build ufo-data)
 
 
 ExternalProject_Add(
@@ -85,6 +104,7 @@ ExternalProject_Add_StepDependencies(fv3-jedi build ioda)
 ExternalProject_Add_StepDependencies(fv3-jedi build crtm)
 ExternalProject_Add_StepDependencies(fv3-jedi build ufo)
 ExternalProject_Add_StepDependencies(fv3-jedi build fv3-jedi-lm)
+ExternalProject_Add_StepDependencies(fv3-jedi build ioda-data)
 
 file (GLOB obsimul_files gaan/*.py)
 install (
