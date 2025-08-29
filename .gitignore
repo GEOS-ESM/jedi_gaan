@@ -10,6 +10,7 @@ src/@ufo/
 src/@vader/
 src/@saber/
 src/@fv3-jedi/
+src/@fv3-jedi-lm/
 /.mepo/
 /build/
 /install/

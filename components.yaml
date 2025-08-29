@@ -5,7 +5,7 @@ jedi_gaan:
 env:
   local: ./@env
   remote: ../ESMA_env.git
-  branch: feature/mathomp4/genesis-try-build
+  branch: feature/mathomp4/genesis-try-build-fms
   develop: main
 
 cmake:
@@ -85,7 +85,7 @@ crtm:
 ufo:
   local: ./src/@ufo
   remote: https://github.com/mathomp4/ufo
-  branch: feature/mepo-support
+  branch: feature/mepo-support-develop
 
 ufo-data:
   local: ./data/ufo-data
@@ -101,4 +101,8 @@ fv3-jedi:
   local: ./src/@fv3-jedi
   remote: https://github.com/JCSDA-internal/fv3-jedi
   branch: develop
-    
+
+fv3-jedi-data:
+  local: ./data/fv3-jedi-data
+  remote: https://github.com/JCSDA-internal/fv3-jedi-data
+  branch: develop  
