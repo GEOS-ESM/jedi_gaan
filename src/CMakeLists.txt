@@ -78,6 +78,8 @@ ExternalProject_Add(
     -DCMAKE_INSTALL_PREFIX:PATH=${CMAKE_INSTALL_PREFIX}
     -DFV3_FORECAST_MODEL=GEOS
     -DFV3_FORECAST_MODEL_ROOT=/discover/nobackup/projects/gmao/SIteam/Models/GEOSgcm-v11.7.2-FixEtaEcho/install-spack-stack-1.9-oneapi
+    -DUFO_CRTM_TESTFILES_PATH=${UFO_CRTM_TESTFILES_PATH}
+    -DENABLE_FV3_JEDI_DATA=ON
     )
 ExternalProject_Add_StepDependencies(fv3-jedi build oops)
 ExternalProject_Add_StepDependencies(fv3-jedi build saber)

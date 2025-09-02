@@ -69,6 +69,7 @@ if(EXISTS ${CRTM_COEFFICIENTS_DIR})
     ${CMAKE_CURRENT_SOURCE_DIR}/src/@ufo/test-data-release/crtm/2.4.1_skylab_4.0
     SYMBOLIC
     )
+  set (UFO_CRTM_TESTFILES_PATH ${CMAKE_CURRENT_SOURCE_DIR}/src/@ufo/test-data-release/crtm/2.4.1_skylab_4.0)
 else()
   message(STATUS "No CRTM coefficients found at ${CRTM_COEFFICIENTS_DIR}. Make sure you are on a node with internet access.")
   execute_process(
