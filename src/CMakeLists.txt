@@ -87,7 +87,7 @@ ExternalProject_Add_StepDependencies(fv3-jedi build crtm)
 ExternalProject_Add_StepDependencies(fv3-jedi build ufo)
 ExternalProject_Add_StepDependencies(fv3-jedi build fv3-jedi-lm)
 
-file (GLOB obsimul_files gaan/*.py)
+file (GLOB gaan_files gaan/*.py)
 install (
   FILES ${gaan_files}
   DESTINATION lib/Python/gaan/
