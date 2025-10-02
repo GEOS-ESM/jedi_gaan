@@ -11,6 +11,7 @@ ExternalProject_Add(
   SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/@crtm
   CMAKE_ARGS
     -DCMAKE_INSTALL_PREFIX:PATH=${CMAKE_INSTALL_PREFIX}
+  BUILD_ALWAYS TRUE
 )
 
 ExternalProject_Add(
@@ -18,6 +19,7 @@ ExternalProject_Add(
   SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/@oops
   CMAKE_ARGS
     -DCMAKE_INSTALL_PREFIX:PATH=${CMAKE_INSTALL_PREFIX}
+  BUILD_ALWAYS TRUE
 )
 
 
@@ -27,6 +29,7 @@ ExternalProject_Add(
   CMAKE_ARGS
     -DCMAKE_INSTALL_PREFIX:PATH=${CMAKE_INSTALL_PREFIX}
     -DENABLE_IODA_DATA:BOOL=ON
+  BUILD_ALWAYS TRUE
 )
 ExternalProject_Add_StepDependencies(ioda build oops)
 
@@ -38,6 +41,7 @@ ExternalProject_Add(
   CMAKE_ARGS
     -DCMAKE_INSTALL_PREFIX:PATH=${CMAKE_INSTALL_PREFIX}
     -DENABLE_UFO_DATA:BOOL=ON
+  BUILD_ALWAYS TRUE
 )
 ExternalProject_Add_StepDependencies(ufo build ioda)
 ExternalProject_Add_StepDependencies(ufo build oops)
@@ -50,6 +54,7 @@ ExternalProject_Add(
   CMAKE_ARGS
     -DCMAKE_INSTALL_PREFIX:PATH=${CMAKE_INSTALL_PREFIX}
     -DENABLE_IODA_DATA:BOOL=ON
+  BUILD_ALWAYS TRUE
 )
 ExternalProject_Add_StepDependencies(vader build oops)
 
@@ -59,6 +64,7 @@ ExternalProject_Add(
   CMAKE_ARGS
     -DCMAKE_INSTALL_PREFIX:PATH=${CMAKE_INSTALL_PREFIX}
     -DENABLE_IODA_DATA:BOOL=ON
+  BUILD_ALWAYS TRUE
 )
 ExternalProject_Add_StepDependencies(saber build vader)
 
@@ -68,6 +74,7 @@ ExternalProject_Add(
   CMAKE_ARGS
     -DCMAKE_INSTALL_PREFIX:PATH=${CMAKE_INSTALL_PREFIX}
     -DENABLE_IODA_DATA:BOOL=ON
+  BUILD_ALWAYS TRUE
 )
 
 
@@ -78,6 +85,7 @@ ExternalProject_Add(
     -DCMAKE_INSTALL_PREFIX:PATH=${CMAKE_INSTALL_PREFIX}
     -DENABLE_FV3_JEDI_DATA=ON
     -DUFO_CRTM_TESTFILES_PATH=${UFO_CRTM_TESTFILES_PATH}
+  BUILD_ALWAYS TRUE
     )
 ExternalProject_Add_StepDependencies(fv3-jedi build oops)
 ExternalProject_Add_StepDependencies(fv3-jedi build saber)
